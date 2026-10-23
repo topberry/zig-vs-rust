@@ -1,0 +1,23 @@
+name: Zig vs Rust
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  compare:
+    name: Correctness + bench
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: mlugg/setup-zig@v2
+        with:
+          version: 0.16.0
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Compare Zig vs Rust
+        run: ./tests/compare.sh

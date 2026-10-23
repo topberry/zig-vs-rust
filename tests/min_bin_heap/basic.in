@@ -1,0 +1,14 @@
+# Same sequence as the Zig MinBinHeap unit test
+I 8
+I 7
+I 10
+I 4
+I 12
+E
+E
+I 5
+E
+E
+E
+E
+E

@@ -1,0 +1,12 @@
+# Duplicate values and sift behavior
+I 3
+I 1
+I 3
+I 1
+I 2
+E
+E
+E
+E
+E
+E

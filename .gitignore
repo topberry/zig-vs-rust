@@ -1,0 +1,12 @@
+# Rust
+rust/target/
+harness/rust/target/
+
+# Zig
+.zig-cache/
+zig-cache/
+zig-out/
+harness/out/
+
+# Generated bench input
+tests/min_bin_heap/bench.in
