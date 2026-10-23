@@ -136,7 +136,6 @@ pub fn Queue(comptime T: type) type {
     };
 }
 
-const prnt = @import("print.zig");
 pub fn MinBinHeap(comptime T: type) type {
     return struct {
         head: usize,
