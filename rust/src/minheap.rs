@@ -1,7 +1,7 @@
 #[derive(Debug)]
 pub struct MinHeap {
 
-    storage: Vec<i32>,
+    storage: Vec<i64>,
 
 }
 
@@ -12,7 +12,7 @@ impl MinHeap {
         MinHeap { storage: vec![0] }
     }
 
-    pub fn from_vector(init: Vec<i32>) -> MinHeap {
+    pub fn from_vector(init: Vec<i64>) -> MinHeap {
 
         let mut v = vec![0];
         init.iter().for_each(|i| v.push(*i));
@@ -70,7 +70,7 @@ impl MinHeap {
     }
 
     /// Remove the minimum from the collection and return it
-    pub fn extract_min(& mut self) -> Option<i32> {
+    pub fn extract_min(& mut self) -> Option<i64> {
         
         if self.storage.len() > 1 {
         
@@ -91,7 +91,7 @@ impl MinHeap {
     }
 
     // Insert into the heap
-    pub fn insert(& mut self, item: i32) {
+    pub fn insert(& mut self, item: i64) {
 
         self.storage.push(item);
         self.bubble_up( self.storage.len() - 1 );
