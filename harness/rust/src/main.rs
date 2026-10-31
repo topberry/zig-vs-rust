@@ -1,5 +1,5 @@
 use std::io::{self, BufRead, Write};
-use zig_vs_rust::MinBinHeap;
+use super::super::rust::minheap::MinHeap;
 
 fn main() {
     if let Err(e) = run() {
@@ -11,7 +11,7 @@ fn main() {
 fn run() -> Result<(), String> {
     let stdin = io::stdin();
     let mut stdout = io::stdout().lock();
-    let mut heap = MinBinHeap::<i64>::new();
+    let mut heap = MinHeap::new();
 
     for line in stdin.lock().lines() {
         let line = line.map_err(|e| e.to_string())?;
